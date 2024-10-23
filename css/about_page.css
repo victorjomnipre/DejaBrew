@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url(font/OpenSans.ttf);
+}
+@font-face {
+    font-family: 'Rundeck';
+    src: url(font/Rundeck.ttf);
+}
+@font-face {
+    font-family: 'GetCoffee';
+    src: url(font/coffee.otf);
+}
+@font-face {
+    font-family: 'Coffee Fills';
+    src: url(font/Coffee\ Fills.ttf);
+}
+@font-face {
+    font-family: 'Archivo Black';
+    src: url(font/ArchivoBlack-Regular.ttf);
+}
+@font-face {
+    font-family: 'Delight Coffee';
+    src: url(font/Delight\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Lets Coffee';
+    src: url(font/Lets\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Love Coffee';
+    src: url(font/Love\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Milky Coffee';
+    src: url(font/Milky\ Coffee.ttf);
+}
+@font-face {
+    font-family: 'Coffee Spark';
+    src: url(font/Coffee\ Spark.otf);
+}
+@font-face {
+    font-family: 'CoffeeCake';
+    src: url(font/CoffeCake.otf);
+}
+@font-face {
+    font-family: 'Sergio Trendy';
+    src: url(font/serge.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sergio Trendy', sans-serif;
+    line-height: 1.6;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: #1c0d08;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 190vh;
+}
+section{
+    scroll-snap-align: start;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    background-color: #ffffff;
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+
+/*effect*/
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("../images/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+
+}
+.djb_beans {
+    margin-top: -170px;
+    max-height: 200px;
+    margin-bottom: -40px;
+}
+
+.title1{
+    font-size: 35px;
+    color: #EFE9DB;
+    margin-bottom: 20px;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+}
+
+.card {
+    width: 340px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 1px 20px -9px #EFE9DB;
+}
+
+.card > .row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #1d0c01;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    margin-right: -29px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 500px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description .desc {
+    color: #e98f11;
+    font-size: 14px;
+    padding-top: 5px;
+    text-shadow: 0 0 2px #3b2618,
+               0 0 2px #3b2618,
+               0 0 2px #3b2618,
+               0 0 2px #3b2618,
+               0 0 2px #3b2618,
+               0 0 2px #3b2618;
+}
+
+.description .name {
+    font-size: 20px;
+    font-family: 'Sergio Trendy';
+    color: #3b2618;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px #EFE9DB, /* Blue glow */
+               0 0 2px #EFE9DB,
+               0 0 2px #EFE9DB,
+               0 0 2px #EFE9DB,
+               0 0 2px #EFE9DB,
+               0 0 2px #EFE9DB;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 460px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('../images/bikoy.png');
+}
+.card[for="c2"] {
+    background-image: url('../images/rella.png');
+}
+
+/*section*/
+
+.sec_about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 60px;
+
+    background-image: url('../images/Deja\ Brew\ BackgroundLO.png');
+}
+
+.djb_v2 {
+    margin-top: -40px;
+    max-height: 200px;
+    margin-bottom: 20px;
+}
+.title2{
+    margin-top: -490px;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+.description {
+    font-size: 16.6px;
+    font-family: 'Coffee Fills';
+    text-align: justify;
+    letter-spacing: 1px;
+    text-indent: 3rem;
+    width: 58%;
+}
+.profile_image {
+    margin-top: -90px;
+    display: flex;
+    gap: 730px;
+    position: relative;
+}
+
+.bikoy, .rella {
+    max-height: 530px;
+}
+

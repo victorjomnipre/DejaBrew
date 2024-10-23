@@ -1,0 +1,515 @@
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url(font/OpenSans.ttf);
+}
+@font-face {
+    font-family: 'Rundeck';
+    src: url(font/Rundeck.ttf);
+}
+@font-face {
+    font-family: 'GetCoffee';
+    src: url(font/coffee.otf);
+}
+@font-face {
+    font-family: 'Coffee Fills';
+    src: url(font/Coffee\ Fills.ttf);
+}
+@font-face {
+    font-family: 'Archivo Black';
+    src: url(font/ArchivoBlack-Regular.ttf);
+}
+@font-face {
+    font-family: 'Delight Coffee';
+    src: url(font/Delight\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Lets Coffee';
+    src: url(font/Lets\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Love Coffee';
+    src: url(font/Love\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Milky Coffee';
+    src: url(font/Milky\ Coffee.ttf);
+}
+@font-face {
+    font-family: 'Coffee Spark';
+    src: url(font/Coffee\ Spark.otf);
+}
+@font-face {
+    font-family: 'CoffeeCake';
+    src: url(font/CoffeCake.otf);
+}
+@font-face {
+    font-family: 'Sergio Trendy';
+    src: url(font/serge.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sergio Trendy', sans-serif;
+    line-height: 1.6;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: #1c0d08;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 190vh;
+}
+section{
+    scroll-snap-align: start;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    background-color: #ffffff;
+    overflow: hidden;
+    padding: 30px 50px;
+    height: 100vh;
+
+}
+
+
+
+/* Home Page CSS */
+#home {
+    background-image: url("../images/Deja_Brew\ Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    width: 100%;
+    background-position: center center;
+    margin-bottom: -100px;
+    scroll-snap-align: start;
+    justify-content: left;
+}
+
+.djb_beans {
+    max-height: 340px;
+    display: flex;
+    margin-left: 20px;
+    margin-right: -65px;
+}
+
+.brandName {
+    color: #EFE9DB;
+    text-align: center;
+}
+.brandName .bn1{
+    letter-spacing: 9px;
+    margin-bottom: -73px;
+}
+.bn1, .bn2{
+    font-size: 110px;
+}
+.bn3{
+    padding-right: 120px;
+    margin-top: -60px;
+    font-size: 53px;
+    color: #c5812a;
+}
+.tagline{
+    font-size: 24px;
+    padding-top: 360px; 
+    color: #f3ece4;
+    margin-left: -400px;
+    text-align: center;
+}
+
+.socmed-link{
+    display: block;
+    justify-content: left;
+    margin-top: 460px;
+    margin-left: -356px;
+}
+.socmed-button{
+    background-color: transparent;
+    border: none;
+    color: #EFE9DB;
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.socmed-button:hover {
+    color: #ff9500;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/*about Page Section*/
+
+.sec_about {
+    background-image: url('../images/Deja\ Brew\ Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.djb_v2 {
+    margin-top: 10px;
+    max-height: 200px;
+}
+.about_title{
+    font-size: 28px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 17px;
+    
+    font-family: 'Coffee Fills';
+    text-align: justify;
+    letter-spacing: 1px;
+    text-indent: 3rem;
+    width: 90%;
+}
+.about_imgContent{
+    margin-top: -10px;
+    display: block;
+}
+.abt_img1, .abt_img2, .abt_img3{
+    max-height: 96px;
+    margin: 30px;
+}
+/*Deja Brew Cards*/
+
+.poster_cards{
+    background-image: url("../images/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.djb_dark {
+    max-height: 200px;
+    margin-top: -20px;
+}
+
+.txt_card {
+    margin-top: -20px;
+    font-size: 22px;
+    color: #EFE9DB;
+    font-family: 'Coffee Fills';
+    text-align: justify;
+    letter-spacing: 1px;
+}
+/*image - card*/
+.poster{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 30px;
+    justify-content: center;
+}
+.img_cards {
+    width: 250px;
+    height: 350px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .img_cards:hover {
+    box-shadow: 0 10px 30px rgba(245, 245, 220, 0.8);
+    transform: scale(1.05);
+}
+.details {
+    color: #3b2618;
+    font-size: 24px;
+    box-shadow: 0 3px 10px #efe9db34;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    height: 0;
+    transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    padding: 0 0.9em;
+    overflow: hidden;
+}
+.img_cards:hover > .details {
+    height: 4rem;
+    backdrop-filter: blur(2px);
+}
+.img_cards[for="c1"] {
+    background-image: url('../images/equipment.png');
+    background-size: cover;
+}
+.img_cards[for="c2"] {
+    background-image: url('../images/cup.png');
+    background-size: cover;
+}
+.img_cards[for="c3"] {
+    background-image: url('../images/take.png');
+    background-size: cover;
+}
+.img_cards[for="c4"] {
+    background-image: url('../images/beans.png');
+    background-size: cover;
+}
+.img_cards[for="c5"] {
+    background-image: url('../images/pastry.png');
+    background-size: cover;
+}
+
+/*info section*/
+.gallery{
+    height: 175vh;
+    background-image: url('../images/Background\ Beans.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.djb_v3 {
+    margin-top: -30px;
+    max-height: 200px;
+}
+.gallery_title{
+    font-size: 32px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+/*gallery*/
+.img_gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery_cards {
+    width: 320px;
+    height: 270px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.gallery_cards:hover {
+    box-shadow: 0 10px 30px rgba(245, 245, 220, 0.8);
+    transform: scale(1.1);
+}
+
+.gallery_details {
+    color: #3b2618;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; 
+    transform: translateY(100%);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    padding: 25px;
+    text-align: justify ;
+}
+.gallery_cards:hover .gallery_details {
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.gtitle{
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+.gdescription{
+    font-size: 14px;
+    text-align: justify;
+}
+
+.gallery_cards[for="g1"] {
+    background-image: url('../images/Vanilla\ Almond\ Latte.png');
+    background-size: cover;
+}
+
+.gallery_cards[for="g2"] {
+    background-image: url('../images/Caramel\ Swirl\ Cappuccino.png');
+    background-size: cover;
+}
+
+.gallery_cards[for="g3"] {
+    background-image: url('../images/Chocolate\ Hazelnut\ Mocha.png');
+    background-size: cover;
+}
+
+.gallery_cards[for="g4"] {
+    background-image: url('../images/Spanish\ Latte.png');
+    background-size: cover;
+}
+
+.gallery_cards[for="g5"] {
+    background-image: url('../images/Macchiato.png');
+    background-size: cover;
+}
+
+.gallery_cards[for="g6"] {
+    background-image: url('../images/Classic\ Hot\ Chocolate.png');
+    background-size: cover;
+}
+
+.gallery_cards[for="g7"] {
+    background-image: url('../images/Matcha\ Latte.png');
+    background-size: cover;
+}
+
+.gallery_cards[for="g8"] {
+    background-image: url('../images/Berry\ Lemonade.png');
+    background-size: cover;
+}
+
+.gallery_cards[for="g9"] {
+    background-image: url('../images/Tropical\ Mango.png');
+    background-size: cover;
+}
+
+.gallery_cards[for="g10"] {
+    background-image: url('../images/Chocolate\ Chip\ Cookies.png');
+    background-size: cover;
+}
+
+.gallery_cards[for="g11"] {
+    background-image: url('../images/Croissant.png');
+    background-size: cover;
+}
+
+.gallery_cards[for="g12"] {
+    background-image: url('../images/Turkey\ and\ Swiss\ Sandwich.png');
+    background-size: cover;
+}
+
+/*platforms section*/
+.platforms{
+    height: 14vh;
+    background-image: url('../images/Background.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.mediaPlatforms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    padding: 0 20px;
+    justify-items: center;
+    margin-top: -15px;
+}
+
+.contact_left {
+    font-size: 1.4rem;
+    color: #EFE9DB;
+    font-family: 'Sergio Trendy';
+}
+.mediaIcons {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    color: #EFE9DB;
+    font-family: 'Archivo Black';
+    font-size: 2rem;
+}
+
+.mediaIcons a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.mediaIcons a:hover {
+    color: #FFD700;
+}
+
+
+
+@media (max-width: 768px) {
+    body{
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .header_button {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #482E1D;
+        border-bottom-left-radius: 20px;
+        width: 40%;
+        max-height: 0;
+        height: auto;
+    }
+
+    .header_button button {
+        justify-content: center;
+        padding: 18px;
+    }
+    .header_button button:hover {
+        background-color: #744d21;
+        color: #EFE9DB;
+    }
+    .header_toggle {
+        display: block;
+    }
+    .header_button.active {
+        max-height: 1000px;
+    }
+
+    /* Footer */
+    .Footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 20px;
+        text-align: center;
+    }
+
+    .footer_left,
+    .footer_center,
+    .footer_right {
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .footer_left,
+    .footer_right {
+        font-size: 12px;
+    }
+
+    .footer_center {
+        font-size: 13px;
+    }
+}

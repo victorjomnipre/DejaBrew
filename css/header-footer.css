@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url(font/OpenSans.ttf);
+}
+@font-face {
+    font-family: 'Rundeck';
+    src: url(font/Rundeck.ttf);
+}
+@font-face {
+    font-family: 'GetCoffee';
+    src: url(font/coffee.otf);
+}
+@font-face {
+    font-family: 'Coffee Fills';
+    src: url(font/Coffee\ Fills.ttf);
+}
+@font-face {
+    font-family: 'Archivo Black';
+    src: url(font/ArchivoBlack-Regular.ttf);
+}
+@font-face {
+    font-family: 'Delight Coffee';
+    src: url(font/Delight\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Lets Coffee';
+    src: url(font/Lets\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Love Coffee';
+    src: url(font/Love\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Milky Coffee';
+    src: url(font/Milky\ Coffee.ttf);
+}
+@font-face {
+    font-family: 'Coffee Spark';
+    src: url(font/Coffee\ Spark.otf);
+}
+@font-face {
+    font-family: 'CoffeeCake';
+    src: url(font/CoffeCake.otf);
+}
+@font-face {
+    font-family: 'Sergio Trendy';
+    src: url(font/serge.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sergio Trendy', sans-serif;
+    line-height: 1.6;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: #1c0d08;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 190vh;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: #3b2618;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+}
+
+.brand_logo {
+    max-height: 110px;
+    margin-right: auto;
+    display: block;
+}
+
+.header_button {
+    display: flex;
+    height: 100%;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.header_button a {
+    background: none;
+    font-family: 'Open Sans ExtraBold', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 20px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.4s ease;
+}
+
+.header_button a:hover {
+    background-color: #ff9500;
+    color: #EFE9DB;
+}
+
+/* Footer Styles */
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: #3b2618;
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 100;
+    color: #EFE9DB;
+    font-size: 14px;
+}
+
+.footer_left,
+.footer_center,
+.footer_right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer_left {
+    text-align: left;
+}
+
+.footer_right {
+    text-align: right;
+}
