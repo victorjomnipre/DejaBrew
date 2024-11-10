@@ -61,19 +61,33 @@ body {
     color: #333;
 }
 
+<<<<<<< HEAD
 
 table {
     width: 100%;
+=======
+table {
+    width: 100%;
+    max-width: 900px;
+>>>>>>> 05c5a47 (first commit)
     border-collapse: collapse;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
 }
 thead th, tfoot th {
+<<<<<<< HEAD
     font-family: "Roboto Slab";
     color: #000000;
     font-weight: bold;
     text-align: center;
     padding: 20px;
+=======
+    background-color: #333;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+>>>>>>> 05c5a47 (first commit)
     font-size: 16px;
 }
 
@@ -88,8 +102,12 @@ tbody tr:hover {
 
 
 tbody td {
+<<<<<<< HEAD
     font-family: "Roboto Slab SemiBold";
     padding: 18px;
+=======
+    padding: 12px;
+>>>>>>> 05c5a47 (first commit)
     text-align: center;
     font-size: 14px;
     border-top: 1px solid #ddd;
@@ -97,19 +115,30 @@ tbody td {
 
 
 tbody td a {
+<<<<<<< HEAD
     color: #000000;
+=======
+    color: #0077cc;
+>>>>>>> 05c5a47 (first commit)
     text-decoration: none;
     font-weight: bold;
 }
 
 tbody td a:hover {
     text-decoration: underline;
+<<<<<<< HEAD
     color: #df8506;
+=======
+>>>>>>> 05c5a47 (first commit)
 }
 
 
 tbody td:last-child {
+<<<<<<< HEAD
     color: #000000;
+=======
+    color: #0077cc;
+>>>>>>> 05c5a47 (first commit)
     font-weight: bold;
     cursor: pointer;
 }

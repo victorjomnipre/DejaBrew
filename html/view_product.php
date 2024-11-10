@@ -32,3 +32,44 @@
     </section>
 </body>
 </html>
+<link rel="stylesheet" href="css/Styles.css">
+<link rel="stylesheet" href="css/booklist.css">
+
+<table>
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Coffee Name</td>
+            <td><?php echo $bookDetails->name; ?></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><?php echo $bookDetails->description; ?></td>
+        </tr>
+        <tr>
+            <td>Sugar Level</td>
+            <td><?php echo $bookDetails->sugar_level; ?></td>
+        </tr>
+        <tr>
+            <td>Roast Level</td>
+            <td><?php echo $bookDetails->roast_level; ?></td>
+        </tr>
+        <tr>
+            <td>Caffeine Content</td>
+            <td><?php echo $bookDetails->caffeine_content; ?></td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td><?php echo $bookDetails->category; ?></td>
+        </tr>
+        <tr>
+            <td>Ingredients</td>
+            <td><?php echo $bookDetails->ingredients; ?></td>
+        </tr>
+    </tbody>
+</table>
