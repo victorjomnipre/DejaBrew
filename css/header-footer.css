@@ -60,10 +60,9 @@ body {
     line-height: 1.6;
     padding-top: 60px;
     padding-bottom: 40px;
-    background-color: #1c0d08;
+    background-color: #ffffff;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 190vh;
 }
 
 .Header {

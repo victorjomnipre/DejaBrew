@@ -1,0 +1,119 @@
+
+
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url(font/OpenSans.ttf);
+}
+@font-face {
+    font-family: 'Rundeck';
+    src: url(font/Rundeck.ttf);
+}
+@font-face {
+    font-family: 'GetCoffee';
+    src: url(font/coffee.otf);
+}
+@font-face {
+    font-family: 'Coffee Fills';
+    src: url(font/Coffee\ Fills.ttf);
+}
+@font-face {
+    font-family: 'Archivo Black';
+    src: url(font/ArchivoBlack-Regular.ttf);
+}
+@font-face {
+    font-family: 'Delight Coffee';
+    src: url(font/Delight\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Lets Coffee';
+    src: url(font/Lets\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Love Coffee';
+    src: url(font/Love\ Coffee.otf);
+}
+@font-face {
+    font-family: 'Milky Coffee';
+    src: url(font/Milky\ Coffee.ttf);
+}
+@font-face {
+    font-family: 'Coffee Spark';
+    src: url(font/Coffee\ Spark.otf);
+}
+@font-face {
+    font-family: 'CoffeeCake';
+    src: url(font/CoffeCake.otf);
+}
+@font-face {
+    font-family: 'Sergio Trendy';
+    src: url(font/serge.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+thead th, tfoot th {
+    font-family: "Roboto Slab";
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+
+tbody td {
+    font-family: "Roboto Slab SemiBold";
+    padding: 18px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+
+
+tbody td a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+tbody td a:hover {
+    text-decoration: underline;
+    color: #df8506;
+}
+
+
+tbody td:last-child {
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+tbody td:last-child:hover {
+    color: #005fa3;
+}
