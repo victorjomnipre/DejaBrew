@@ -139,8 +139,7 @@ class Controller
 			{
                 include('html/home_page.html');
                 break;
-			}
-                
+            }
         }
     }
 }

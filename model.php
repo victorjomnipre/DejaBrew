@@ -147,19 +147,18 @@ class Model
 			}
 			return $data;  
 		}
-		public function updateRecords($coffee_id,$name,$description,$sugar_level,$roast_level,$caffeine_content,$category,$ingredients,$images)
-			{
-				$updateQuery="UPDATE coffees SET name='$name',description='$description',sugar_level='$sugar_level',roast_level='$roast_level',caffeine_content='$caffeine_content',
-									category='$category',ingredients='$ingredients',images='$images' where coffee_id='$coffee_id'";
+	public function updateRecords($coffee_id,$name,$description,$sugar_level,$roast_level,$caffeine_content,$category,$ingredients,$images)
+		{
+			$updateQuery="UPDATE coffees SET name='$name',description='$description',sugar_level='$sugar_level',roast_level='$roast_level',caffeine_content='$caffeine_content',
+								category='$category',ingredients='$ingredients',images='$images' where coffee_id='$coffee_id'";
 
-				var_dump($updateQuery);
-				
-				$result = mysqli_query($this->db,$updateQuery);
-				
-				if(!$result)
-					return mysqli_error($this->db);
-				else
-					return "Record Updated";
-			}
+			var_dump($updateQuery);
 			
-}
+			$result = mysqli_query($this->db,$updateQuery);
+			
+			if(!$result)
+				return mysqli_error($this->db);
+			else
+				return "Record Updated";
+		}
+}		
