@@ -42,9 +42,10 @@ section {
     height: fit-content;
 }
 .dejaLogo {
-    margin-top: -30px;
-    max-height: 200px;
-    margin-bottom: -25px;
+    position: relative;
+    max-height: 170px;
+    margin-bottom: -40px;
+    left: 260px;
 }
 
 .content {
@@ -53,16 +54,17 @@ section {
 }
 
 .prodImage {
+    position: relative;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
     box-sizing: border-box;
+    bottom: 20px;
 }
 
 .prodImage img {
-    max-height: 420px;
+    max-height: 490px;
     margin: 0;
 }
 

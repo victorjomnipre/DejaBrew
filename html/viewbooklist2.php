@@ -34,7 +34,7 @@
                         echo "<td>". $MybookList->caffeine_content ."</td>";
                         echo "<td>". $MybookList->category ."</td>";    
                         echo "<td>". $MybookList->ingredients ."</td>";                                    
-                        echo "<td><a href='index.php?command=editRecord&&coffee_id=".$MybookList->coffee_id."'>Edit</a> |
+                        echo "<td><a href='index.php?command=editBooks&&coffee_id=".$MybookList->coffee_id."'>Edit</a> |
                                  <a href='index.php?command=deleteRec&&coffee_id=".$MybookList->coffee_id."' onclick='return confirm(\"Are you sure you want to do Delete this record?\")'>Delete</a></td>";
                     echo "</tr>";
                 }

@@ -88,17 +88,59 @@ class Controller
                     break;
                     
                 }
+
+            case 'editBooks':
+                {
+                    $CoffeeId=$_REQUEST['coffee_id'];              
+                    $coffeeRecord=$this->model->searchBook($CoffeeId);
+                    
+                    include 'html/edit.php';				
+                    break;
+                }
+                
+            case 'updateRec':
+                {				
+                    $coffee_id=$_REQUEST['ID'];
+                    $name=$_REQUEST['Name'];
+                    $description=$_REQUEST['Description'];
+                    $sugar_level=$_REQUEST['Sugar'];
+                    $roast_level=$_REQUEST['Roast'];
+                    $caffeine_content=$_REQUEST['Caffeine'];
+                    $category=$_REQUEST['Category'];
+                    $ingredients=$_REQUEST['Ingredients'];
+                
+                    $imageUpload=basename($_FILES["fileToUpload"]["name"]);
+                
+                    $imagePath="uploads/". $imageUpload;
+                
+                    $imageFileType = strtolower(pathinfo($imagePath,PATHINFO_EXTENSION));
+                    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+                    
+                
+                    $err=$this->model->checkImageUpload($check,$imageFileType,$imagePath);
+                    
+                    
+                    if($err=="OK")
+                    {
+                        $result=$this->model->updateRecords($coffee_id,$name,$description,$sugar_level,$roast_level,$caffeine_content,$category,$ingredients,$imagePath);
+                        echo "<script> alert ('".$result."')
+                            window.location.href='index.php?command=products'
+                        </script>";
+                    }
+                    else
+                    {
+                        echo '<script> alert ("'.$err.'")</script>';
+                    }					
+                    break;
+                }
+
             case 'home':
             default:
 			{
                 include('html/home_page.html');
                 break;
 			}
-            case 'editRecord':
-                {
-                    include ('html/edit.php');
-                    break;
-                }
+                
         }
     }
 }

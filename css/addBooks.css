@@ -1,41 +1,45 @@
 /* General Styles */
 .addingPage {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    box-sizing: border-box;
-
+    padding: 20px;
     background-image: url("../images/djb_productD.png");
-    background-size:auto;
+    background-size: auto;
     background-attachment: fixed;
     background-position: center center;
 }
 
-table.form-table {
-    width: 700px;
-    border-collapse: collapse;
+.form-container {
+    width: 100%;
+    max-width: 750px;
     background-color: #ffffff;
+    padding: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 0 15px;
     box-sizing: border-box;
 }
 
-.form-table td {
-    padding: 10px 15px;
-    font-size: 16px;
+.form-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #197909;
+    margin-bottom: 20px;
 }
 
-/* Style for text input boxes */
-.form-table input[type="text"] {
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0 5px;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
     width: 100%;
-    max-width: 450px;
     padding: 8px 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -43,20 +47,13 @@ table.form-table {
     box-sizing: border-box;
 }
 
-.form-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+textarea {
+    resize: none;
 }
 
-.form-table td {
-    font-weight: bold;
-    color: #555;
-}
-
-.form-table img {
-    display: block;
-    margin: 15px auto;
-    border-radius: 5px;
-    border: 2px solid #ddd;
+.image-preview {
+    text-align: center;
+    margin: 15px 0;
 }
 
 .form-subheading {
@@ -72,34 +69,41 @@ input[type="file"] {
 }
 
 .custom-file-button {
-    width: 70%;
     display: inline-block;
-    padding: 15px 20px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
     cursor: pointer;
     background-color: #197909;
     color: #fff;
     border-radius: 4px;
-    border: none;
-    transition: background-color 0.3s;
+    margin: 10px 0;
 }
 
 .custom-file-button:hover {
     background-color: #155c07;
 }
 
-.submit-button, .reset-button {
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.submit-button,
+.reset-button {
     padding: 10px 20px;
-    margin: 10px 5px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    color: #fff;
     transition: background-color 0.3s;
 }
 
 .submit-button {
     background-color: #28a745;
-    color: #fff;
 }
 
 .submit-button:hover {
@@ -108,7 +112,6 @@ input[type="file"] {
 
 .reset-button {
     background-color: #dc3545;
-    color: #fff;
 }
 
 .reset-button:hover {

@@ -134,4 +134,32 @@ class Model
 			else
 				return "Record Save";
 		}
+	
+	public function searchBook($coffee_id)
+		{
+			$data = array();
+
+			$queryGetCoffee = mysqli_query($this->db,"SELECT * from coffees where coffee_id='".$coffee_id."'");
+
+			while($getRow=mysqli_fetch_object($queryGetCoffee))    		
+			{    			
+			$data[] = $getRow; // add the row in to the results (data) array
+			}
+			return $data;  
+		}
+		public function updateRecords($coffee_id,$name,$description,$sugar_level,$roast_level,$caffeine_content,$category,$ingredients,$images)
+			{
+				$updateQuery="UPDATE coffees SET name='$name',description='$description',sugar_level='$sugar_level',roast_level='$roast_level',caffeine_content='$caffeine_content',
+									category='$category',ingredients='$ingredients',images='$images' where coffee_id='$coffee_id'";
+
+				var_dump($updateQuery);
+				
+				$result = mysqli_query($this->db,$updateQuery);
+				
+				if(!$result)
+					return mysqli_error($this->db);
+				else
+					return "Record Updated";
+			}
+			
 }

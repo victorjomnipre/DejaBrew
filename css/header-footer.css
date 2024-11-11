@@ -2,45 +2,10 @@
     font-family: 'Open Sans Regular';
     src: url(font/OpenSans.ttf);
 }
-@font-face {
-    font-family: 'Rundeck';
-    src: url(font/Rundeck.ttf);
-}
-@font-face {
-    font-family: 'GetCoffee';
-    src: url(font/coffee.otf);
-}
-@font-face {
-    font-family: 'Coffee Fills';
-    src: url(font/Coffee\ Fills.ttf);
-}
+
 @font-face {
     font-family: 'Archivo Black';
     src: url(font/ArchivoBlack-Regular.ttf);
-}
-@font-face {
-    font-family: 'Delight Coffee';
-    src: url(font/Delight\ Coffee.otf);
-}
-@font-face {
-    font-family: 'Lets Coffee';
-    src: url(font/Lets\ Coffee.otf);
-}
-@font-face {
-    font-family: 'Love Coffee';
-    src: url(font/Love\ Coffee.otf);
-}
-@font-face {
-    font-family: 'Milky Coffee';
-    src: url(font/Milky\ Coffee.ttf);
-}
-@font-face {
-    font-family: 'Coffee Spark';
-    src: url(font/Coffee\ Spark.otf);
-}
-@font-face {
-    font-family: 'CoffeeCake';
-    src: url(font/CoffeCake.otf);
 }
 @font-face {
     font-family: 'Sergio Trendy';
@@ -133,6 +98,7 @@ body {
 .footer_right {
     flex: 1;
     text-align: center;
+    font-family: "Sergio Trendy";
 }
 
 .footer_left {
