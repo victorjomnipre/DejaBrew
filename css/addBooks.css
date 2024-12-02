@@ -1,4 +1,24 @@
-/* General Styles */
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url(font/OpenSans.ttf);
+}
+@font-face {
+    font-family: 'Rundeck';
+    src: url(font/Rundeck.ttf);
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(font/RobotoSlab.ttf);
+}
+@font-face {
+    font-family: 'Archivo Black';
+    src: url(font/ArchivoBlack-Regular.ttf);
+}
+@font-face {
+    font-family: 'Sergio Trendy';
+    src: url(font/serge.ttf);
+}
+
 .addingPage {
     font-family: Arial, sans-serif;
     display: flex;
@@ -15,7 +35,7 @@
 .form-container {
     width: 100%;
     max-width: 750px;
-    background-color: #ffffff;
+    background-image: url("../images/DejaForm.png");
     padding: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -23,44 +43,69 @@
 }
 
 .form-container h2 {
+    font-family: "Sergio Trendy";
     text-align: center;
     font-size: 24px;
-    color: #197909;
+    color: #000000;
     margin-bottom: 20px;
 }
 
 label {
     display: block;
+    font-family: "Roboto Slab";
     font-weight: bold;
     font-size: 16px;
-    color: #555;
+    color: #000000;
     margin: 10px 0 5px;
 }
 
 .form-container input[type="text"],
-.form-container textarea {
+.form-container textarea,
+.form-container select {
     width: 100%;
     padding: 8px 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #fff;
 }
 
 textarea {
     resize: none;
 }
 
+.form-container select {
+    font-family: "Roboto Slab";
+    font-weight: 500;
+    font-size: 0.88rem;
+    padding: 8px 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    box-sizing: border-box;
+}
+.form-container select:focus {
+    border-color: #000000;
+    outline: none;
+}
+
 .image-preview {
+    display: flex;
     text-align: center;
-    margin: 15px 0;
+    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-subheading {
+    font-family: "Roboto Slab ExtraBold";
     font-weight: bold;
     font-size: 18px;
     text-align: center;
-    color: #197909;
+    color: #0a0a0a;
     padding: 10px 0;
 }
 
@@ -74,14 +119,14 @@ input[type="file"] {
     text-align: center;
     padding: 10px;
     cursor: pointer;
-    background-color: #197909;
+    background-color: #3b2618;
     color: #fff;
     border-radius: 4px;
     margin: 10px 0;
 }
 
 .custom-file-button:hover {
-    background-color: #155c07;
+    background-color: #41200b;
 }
 
 .button-group {

@@ -7,40 +7,12 @@
     src: url(font/Rundeck.ttf);
 }
 @font-face {
-    font-family: 'GetCoffee';
-    src: url(font/coffee.otf);
-}
-@font-face {
-    font-family: 'Coffee Fills';
-    src: url(font/Coffee\ Fills.ttf);
+    font-family: 'Roboto Slab';
+    src: url(font/RobotoSlab.ttf);
 }
 @font-face {
     font-family: 'Archivo Black';
     src: url(font/ArchivoBlack-Regular.ttf);
-}
-@font-face {
-    font-family: 'Delight Coffee';
-    src: url(font/Delight\ Coffee.otf);
-}
-@font-face {
-    font-family: 'Lets Coffee';
-    src: url(font/Lets\ Coffee.otf);
-}
-@font-face {
-    font-family: 'Love Coffee';
-    src: url(font/Love\ Coffee.otf);
-}
-@font-face {
-    font-family: 'Milky Coffee';
-    src: url(font/Milky\ Coffee.ttf);
-}
-@font-face {
-    font-family: 'Coffee Spark';
-    src: url(font/Coffee\ Spark.otf);
-}
-@font-face {
-    font-family: 'CoffeeCake';
-    src: url(font/CoffeCake.otf);
 }
 @font-face {
     font-family: 'Sergio Trendy';
@@ -67,7 +39,7 @@ table {
     background-color: #ffffff;
 }
 thead th, tfoot th {
-    font-family: "Roboto Slab";
+    font-family: "Sergio Trendy";
     color: #000000;
     font-weight: bold;
     text-align: center;

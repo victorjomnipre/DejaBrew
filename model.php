@@ -14,18 +14,24 @@ class Model
 		}
 
 	}
-	public function getBookList() 
-	    {
-	        $data = array();
+	public function getBookList($searchInput = '') 
+		{
+			$data = array();
+			
+			$coffeeName = mysqli_real_escape_string($this->db, trim($searchInput));
+			if ($searchInput === '') {
+				$queryGetBooks = mysqli_query($this->db, "SELECT * FROM coffees");
+			} else {
+				$queryGetBooks = mysqli_query($this->db, "SELECT * FROM coffees WHERE name LIKE '%$searchInput%' 
+																		OR ingredients LIKE '%$searchInput%'
+																		OR sugar_level LIKE '%$searchInput%'");
+			}
 
-			$queryGetBooks = mysqli_query($this->db,"SELECT * from coffees");
-
-			while($getRow=mysqli_fetch_object($queryGetBooks))    		
-			{    			
-			  $data[] = $getRow;
+			while ($getRow = mysqli_fetch_object($queryGetBooks)) {        
+				$data[] = $getRow;
 			}
 			return $data;     
-	    }
+		}
 
 	public function getBookDet($coffee_id)
 		{
@@ -44,27 +50,45 @@ class Model
 			return $data;
 		}
 
+	public function getGallery() 
+	    {
+	        $data = array();
+
+			$queryGetImages = mysqli_query($this->db,"SELECT * from coffees");
+
+			while($getRow=mysqli_fetch_object($queryGetImages))    		
+			{    			
+			  $data[] = $getRow;
+			}
+			return $data;     
+	    }
+
 	public function deleteRecord($coffee_id)
 		{
-			$deleteQuery="DELETE from coffees where coffee_id=$coffee_id";
-			
-			$result = mysqli_query($this->db,$deleteQuery);
-			
-			if(!$result)
+			// Fetch the associated image file
+			$queryGetImage = mysqli_query($this->db, "SELECT images FROM coffees WHERE coffee_id='$coffee_id'");
+			if ($getRow = mysqli_fetch_object($queryGetImage)) {
+				$imagePath = $getRow->images;
+				if (file_exists($imagePath)) {
+					unlink($imagePath);
+				}
+			}
+		
+			$deleteQuery = "DELETE FROM coffees WHERE coffee_id='$coffee_id'";
+			$result = mysqli_query($this->db, $deleteQuery);
+		
+			if (!$result) {
 				return mysqli_error($this->db);
-			else
+			} else {
 				return "Record Deleted";
+			}
 		}
 
 	public function checkImageUpload($imageSize,$imageFileType,$target_file)
 		{
-			
-	
 			$uploadOk = 1;
 			$errMsg="1";
-	
-			
-			
+
 				if($imageSize !== false) 
 				{				
 					// Check if file already exists
@@ -90,8 +114,7 @@ class Model
 						{
 							$errMsg= "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 							$uploadOk = 0;
-						}
-											
+						}					
 					}
 				} 
 				else 
@@ -99,7 +122,6 @@ class Model
 					$errMsg= "File is not an image.";
 					$uploadOk = 0;
 				}
-	
 	
 				// Check if $uploadOk is set to 0 by an error
 				if ($uploadOk == 0) 
@@ -125,7 +147,8 @@ class Model
 	public function insertBook($coffee_id,$name,$description,$sugar_level,$roast_level,$caffeine_content,$category,$ingredients,$images)
 		{
 			$insertQuery="INSERT into coffees(coffee_id,name,description,sugar_level,roast_level,caffeine_content,category,ingredients,Images)
-												values('$coffee_id','$name','$description','$sugar_level','$roast_level','$caffeine_content','$category','$ingredients','$images')";
+												values('$coffee_id','$name','$description','$sugar_level','$roast_level','$caffeine_content',
+												'$category','$ingredients','$images')";
 			
 			$result = mysqli_query($this->db,$insertQuery);
 			
@@ -143,22 +166,45 @@ class Model
 
 			while($getRow=mysqli_fetch_object($queryGetCoffee))    		
 			{    			
-			$data[] = $getRow; // add the row in to the results (data) array
+			$data[] = $getRow;
 			}
 			return $data;  
 		}
-	public function updateRecords($coffee_id,$name,$description,$sugar_level,$roast_level,$caffeine_content,$category,$ingredients,$images)
+		
+	public function updateRecords($coffee_id, $name, $description, $sugar_level, $roast_level, $caffeine_content, $category, $ingredients, $images = null)
 		{
-			$updateQuery="UPDATE coffees SET name='$name',description='$description',sugar_level='$sugar_level',roast_level='$roast_level',caffeine_content='$caffeine_content',
-								category='$category',ingredients='$ingredients',images='$images' where coffee_id='$coffee_id'";
-
-			var_dump($updateQuery);
-			
-			$result = mysqli_query($this->db,$updateQuery);
-			
-			if(!$result)
+			$updateQuery = "UPDATE coffees SET ";
+		
+			$updates = [];
+			if (!empty($name)) $updates[] = "name='$name'";
+			if (!empty($description)) $updates[] = "description='$description'";
+			if (!empty($sugar_level)) $updates[] = "sugar_level='$sugar_level'";
+			if (!empty($roast_level)) $updates[] = "roast_level='$roast_level'";
+			if (!empty($caffeine_content)) $updates[] = "caffeine_content='$caffeine_content'";
+			if (!empty($category)) $updates[] = "category='$category'";
+			if (!empty($ingredients)) $updates[] = "ingredients='$ingredients'";
+			if (!empty($images)) {
+				$queryGetImage = mysqli_query($this->db, "SELECT images FROM coffees WHERE coffee_id='$coffee_id'");
+				if ($getRow = mysqli_fetch_object($queryGetImage)) {
+					$oldImagePath = $getRow->images;
+					if (file_exists($oldImagePath)) {
+						unlink($oldImagePath); // Delete the old image file
+					}
+				}
+		
+				$updates[] = "images='$images'";
+			}
+		
+			// Combine updates and finalize query
+			$updateQuery .= implode(", ", $updates) . " WHERE coffee_id='$coffee_id'";
+			$result = mysqli_query($this->db, $updateQuery);
+		
+			if (!$result) {
 				return mysqli_error($this->db);
-			else
+			} else {
 				return "Record Updated";
+			}
 		}
+		
 }		
+?>

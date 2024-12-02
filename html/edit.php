@@ -22,7 +22,7 @@
             <h2>Edit Coffee Details</h2>
             
             <label for="coffee-id">Coffee ID:</label>
-            <input type='text' name='ID' id="coffee-id" value='<?php echo $coffeeRecord[0]->coffee_id ?>'>
+            <input type='text' name='ID' id="coffee-id" value='<?php echo $coffeeRecord[0]->coffee_id ?>' readonly>
             
             <label for="coffee-name">Coffee Name:</label>
             <input type='text' name='Name' id="coffee-name" value='<?php echo $coffeeRecord[0]->name ?>'>

@@ -29,7 +29,7 @@
             
             <p class="form-subheading">Please upload a product picture</p>
             <div class="image-preview">
-                <img src="uploads/preview.jpg" id="previewImage" alt="Preview" width="300" height="300">
+                <img src="uploads/preview.png" id="previewImage" alt="Preview" width="336px" height="436px">
             </div>
             
             <label for="fileToUpload" class="custom-file-button">Upload Photo</label>
@@ -39,16 +39,35 @@
             <textarea name="Description" id="Description" cols="45" rows="5"></textarea>
             
             <label for="Sugar">Sugar Level:</label>
-            <input type="text" name="Sugar" id="Sugar">
+            <select name="Sugar" id="Sugar">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
             
             <label for="Roast">Roast Level:</label>
-            <input type="text" name="Roast" id="Roast">
+            <select name="Roast" id="Roast">
+                <option value="None">None</option>
+                <option value="Light">Light</option>
+                <option value="Medium">Medium</option>
+                <option value="Dark">Dark</option>
+            </select>
             
             <label for="Caffeine">Caffeine Content:</label>
-            <input type="text" name="Caffeine" id="Caffeine">
+            <select name="Caffeine" id="Caffeine">
+                <option value="None">None</option>
+                <option value="Decaf">Decaf</option>
+                <option value="Regular">Regular</option>
+                <option value="High">High</option>
+            </select>
             
             <label for="Category">Category:</label>
-            <input type="text" name="Category" id="Category">
+            <select name="Category" id="Category">
+                <option value="Coffee">Coffee</option>
+                <option value="Non-Coffee">Non-Coffee</option>
+                <option value="Fruit Infusions and Smoothies">Fruit Infusions and Smoothies</option>
+                <option value="Pastry">Pastry</option>
+            </select>
             
             <label for="Ingredients">Ingredients:</label>
             <textarea name="Ingredients" id="Ingredients" cols="45" rows="3"></textarea>

@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url(font/OpenSans.ttf);
+}
+
+@font-face {
+    font-family: 'Sergio Trendy';
+    src: url(font/serge.ttf);
+}
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url(font/RobotoSlab.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sergio Trendy', sans-serif;
+    background-color: beige;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-image: url("../images/djb_productD.png");
+    background-attachment: fixed;
+    background-position: center;
+    height: auto;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product_profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+}
+
+.dejaLogo {
+    margin-top: -30px;
+    max-height: 200px;
+    margin-bottom: -25px;
+}
+
+.section_title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#filterBTNS {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#filterBTNS li {
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#filterBTNS li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c5812a;
+    transition: width 0.3s ease;
+}
+
+#filterBTNS li:hover::before {
+    width: 100%;
+}
+
+#filterBTNS li:hover {
+    color: #c5812a;
+}
+
+/* Coffee Display Section */
+.coffee_display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+/* Coffee Card */
+.coffee_card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.coffee_card:hover {
+    transform: translateY(-10px);
+}
+
+.coffee_card img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+
+.Cofname a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.Cofname a:hover{
+    text-decoration: underline;
+    color: #c5812a;
+
+}
+
+.card_footer {
+    font-family: 'Roboto Slab Black';
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+

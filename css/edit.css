@@ -1,4 +1,23 @@
-/* General Reset */
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url(font/OpenSans.ttf);
+}
+@font-face {
+    font-family: 'Rundeck';
+    src: url(font/Rundeck.ttf);
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(font/RobotoSlab.ttf);
+}
+@font-face {
+    font-family: 'Archivo Black';
+    src: url(font/ArchivoBlack-Regular.ttf);
+}
+@font-face {
+    font-family: 'Sergio Trendy';
+    src: url(font/serge.ttf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +38,7 @@
 }
 
 .edit-form {
-    background: #fff;
+    background-image: url("../images/DejaForm.png");
     color: white;
     padding: 20px 40px;
     width: 750px;
@@ -32,6 +51,8 @@
 }
 
 .edit-form h2 {
+    font-family: "Sergio Trendy";
+    font-size: 1.7rem;
     color: #333;
     margin-bottom: 20px;
     text-align: center;
@@ -40,11 +61,12 @@
 label {
     display: block;
     text-align: left;
+    font-family: "Roboto Slab";
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-top: 15px;
     margin-top: 15px;
-    color: #197909;
+    color: #000000;
     width: 100%;
 }
 
@@ -64,8 +86,7 @@ label {
 .image-preview-section {
     text-align: center;
     margin-top: 20px;
-
-    color: #145b07;
+    color: #1f1f1f;
     font-size: 1.3rem;
 }
 
@@ -84,16 +105,16 @@ label {
     padding: 10px 20px;
     width: 100%;
     cursor: pointer;
-    background-color: #197909;
+    background-color: #3b2618;
     color: #fff;
     border-radius: 4px;
-    margin-top: 10px;
+    margin-top: 10px;   
     margin-bottom: 50px;
     transition: background 0.3s ease;
 }
 
 .custom-file-button:hover {
-    background-color: #145b07;
+    background-color: #41200b;
 }
 
 input[type="file"] {
